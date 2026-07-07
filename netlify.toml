@@ -1,0 +1,14 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Note: VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY
+# should be configured in Netlify dashboard environment variables
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
